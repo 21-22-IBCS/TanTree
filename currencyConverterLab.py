@@ -1,19 +1,21 @@
 def main():
 
-    usValue = input("Please enter the value in USD you wish to convert here")
+    usValue = input("1)Please enter the value in USD you wish to convert here")
     usValue = int(usValue)
-    print(" British Pound\n Serbian Dinar\n Japanese Yen\n Swiss Franc\n Mexican Peso\n EURO")
+    print("\nAvailable exchange currencies:")
+    print(" British Pound Serbian Dinar Japanese Yen Swiss Franc Mexican Peso EURO")
     #print("Please choose your desired currency")
-    dictionary = {
-        "British Pound":.738,
+    d = {
+        "British Pound":0.738,
         "Serbian Dinar":102.,
         "Japanese Yen":115.,
-        "Swiss Franc":.924,
+        "Swiss Franc":0.924,
         "Mexican Peso":20.6,
-        "EURO":.875
+        "EURO":0.875
         }
-    choice = input("Please choose your desired currency")
-    conversion = dictionary.get(choice)* usValue
+    
+    choice = input("\n2)Please choose your desired currency")
+    conversion = d.get(choice)* usValue
     print(conversion)
 
 
