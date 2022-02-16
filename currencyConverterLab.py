@@ -18,7 +18,7 @@ def main():
         conversion = d.get(choice)* usValue
         print(conversion)
 
-        print("\nWhat next?\n1. Enter another conversion\n2. Exit")
+        print("\nWhat next?\n1 Enter another conversion\n2 Exit")
         
         exit = input("\nPlease type 1 or 2 to indicate your decision")
         if exit=="2":
