@@ -19,6 +19,8 @@ def calcy(f, num):
         l = f.split("/")
         result = calcy(l[0], num) / calcy(l[1], num)
         return result
+    elif "e^x" in f:
+        return e**num
     elif "^" in f:
         l = f.split("^")
         result = calcy(l[0], num) ** calcy(l[1], num)
@@ -29,8 +31,6 @@ def calcy(f, num):
         return num**2
     elif "sin(x)" in f:
         return sin(num)
-    elif "e^x" in f:
-        return e**num
     elif "cos(x)" in f:
         return cos(num)
     elif "tan(x)" in f:
@@ -75,6 +75,11 @@ def main():
 
     while True:
         m1 = win.getMouse()
+        
+        if quitB.isClicked(m1):
+            win.close()
+            break
+                
         if graph.isClicked(m1):
             f = fun.getText()
 
@@ -90,10 +95,6 @@ def main():
             for p in points:
                 p.draw(win)
 
-        if quitB.isClicked(m1):
-            win.close()
-            break
-                
     
 
 if __name__ == "__main__":
