@@ -33,10 +33,15 @@ def calcy(f, num):
         return e**num
     elif "cos(x)" in f:
         return cos(num)
-    elif "x" in f:
+    elif "tan(x)" in f:
+        return tan(num)
+    elif "ln(x)" in f:
+        if num>0:
+            return log(num)
+        else:
+            return 0
+    elif f == "x":
         return num
-    elif f == "":
-        return 0
     else:
         return float(f)
 
